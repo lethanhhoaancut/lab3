@@ -1,0 +1,30 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tiêu đề trang sẽ được truyền từ Python -->
+    <title>{{ title }} - Web Flask Đơn Giản</title>
+    <!-- Link tới file CSS trong thư mục static -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">Trang Chủ</a> |
+            <a href="{{ url_for('about') }}">Giới Thiệu</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Đây là nơi nội dung của các trang con sẽ được chèn vào -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2023 - Dự án Flask của tôi.</p>
+    </footer>
+</body>
+</html>
