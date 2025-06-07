@@ -1,0 +1,9 @@
+<!-- templates/user.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Hiển thị biến user_name được truyền từ Python -->
+    <h1>Xin chào, {{ user_name }}!</h1>
+    <p>Đây là trang cá nhân của bạn.</p>
+{% endblock %}
