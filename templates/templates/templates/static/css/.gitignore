@@ -1,0 +1,10 @@
+# Môi trường ảo
+venv/
+__pycache__/
+
+# Các file của hệ điều hành
+.DS_Store
+
+# Các file của IDE
+.idea/
+.vscode/
